@@ -89,11 +89,19 @@
         </div>
     </nav>
     <div class="w-full flex justify-center mt-6">
-        <audio autoplay loop controls class="hidden">
+        <audio id="bg-music" autoplay loop muted>
             <source src="./music/2.mp3" type="audio/mp3">
             Tu navegador no soporta el elemento de audio.
         </audio>
     </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const audio = document.getElementById("bg-music");
+            audio.muted = false; // Intenta activar el sonido una vez que la página se haya cargado
+        });
+    </script>
+    
     
 
     <div class="pt-16 flex flex-col items-center justify-center p-4">
