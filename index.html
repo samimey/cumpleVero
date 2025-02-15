@@ -60,6 +60,16 @@
                         <span class="text-2xl font-bold text-purple-600">MI DIOSA</span>
                     </div>
                 </div>
+                <div class="w-full flex flex-col items-center mt-6">
+                    <audio id="bg-music" loop>
+                        <source src="./music/2.mp3" type="audio/mp3">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                
+                    <button id="play-btn" class="mt-4 px-6 py-2 bg-purple-600 text-white rounded-lg shadow-lg hover:bg-purple-700 transition-all">
+                        ▶ Reproducir Música
+                    </button>
+                </div>
                 <div class="hidden md:flex md:items-center md:space-x-4">
                     <button onclick="scrollToSection('qualities')" class="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium">Cualidades</button>
                     <button onclick="scrollToSection('praises')" class="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium">Elogios</button>
@@ -88,16 +98,7 @@
             </div>
         </div>
     </nav>
-    <div class="w-full flex flex-col items-center mt-6">
-        <audio id="bg-music" loop>
-            <source src="./music/2.mp3" type="audio/mp3">
-            Tu navegador no soporta el elemento de audio.
-        </audio>
     
-        <button id="play-btn" class="mt-4 px-6 py-2 bg-purple-600 text-white rounded-lg shadow-lg hover:bg-purple-700 transition-all">
-            ▶ Reproducir Música
-        </button>
-    </div>
     
     <script>
         document.getElementById("play-btn").addEventListener("click", () => {
