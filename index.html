@@ -88,19 +88,31 @@
             </div>
         </div>
     </nav>
-    <div class="w-full flex justify-center mt-6">
-        <audio id="bg-music" autoplay loop muted>
+    <div class="w-full flex flex-col items-center mt-6">
+        <audio id="bg-music" loop>
             <source src="./music/2.mp3" type="audio/mp3">
             Tu navegador no soporta el elemento de audio.
         </audio>
+    
+        <button id="play-btn" class="mt-4 px-6 py-2 bg-purple-600 text-white rounded-lg shadow-lg hover:bg-purple-700 transition-all">
+            ▶ Reproducir Música
+        </button>
     </div>
     
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("play-btn").addEventListener("click", () => {
             const audio = document.getElementById("bg-music");
-            audio.muted = false; // Intenta activar el sonido una vez que la página se haya cargado
+    
+            if (audio.paused) {
+                audio.play();
+                document.getElementById("play-btn").textContent = "⏸ Pausar Música";
+            } else {
+                audio.pause();
+                document.getElementById("play-btn").textContent = "▶ Reproducir Música";
+            }
         });
     </script>
+    
     
     
 
